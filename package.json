@@ -1,0 +1,10 @@
+{
+  "name": "jglo-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "greenlock-express": "^2.6.8",
+    "request": "latest",
+    "socket.io": "latest"
+  }
+}
