@@ -55,6 +55,12 @@ class WebServerHelper {
                     code: code
                 }
             }, (err,httpResponse,body) => {
+
+                if (err){
+                    console.error('/api/auth', err);
+                    res.sendFile('public/error.html');
+                }
+
                 let json = JSON.parse(body);
 
                 if (!json.access_token){
