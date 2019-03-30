@@ -65,6 +65,7 @@ class WebServerHelper {
 
                 if (!json.access_token){
                     this.socketHelper.sendToRoom(token, 'An error occurred getting the access token');
+                    res.sendFile('/public/error.html', { root: __dirname + '/../' });
                     return;
                 }
 
