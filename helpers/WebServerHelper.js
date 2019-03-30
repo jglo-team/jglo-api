@@ -58,7 +58,7 @@ class WebServerHelper {
 
                 if (err){
                     console.error('/api/auth', err);
-                    res.sendFile('public/error.html');
+                    res.sendFile(__dirname  + '/../public/error.html');
                 }
 
                 let json = JSON.parse(body);
@@ -69,7 +69,7 @@ class WebServerHelper {
                 }
 
                 this.socketHelper.sendToRoom(token, json.access_token);
-                res.sendFile('public/index.html');
+                res.sendFile(__dirname  + '/../public/index.html');
             });
 
         });
