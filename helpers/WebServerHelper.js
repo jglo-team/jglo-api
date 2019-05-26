@@ -15,6 +15,7 @@ class WebServerHelper {
         if (config.https){
             this.lex = greenlock.create({
                 server: 'https://acme-v02.api.letsencrypt.org/directory',
+		version: 'draft-11',
                 email: 'ricardomaltez@gmail.com',
                 agreeTos: true,
                 configDir: __dirname + '/keys',
